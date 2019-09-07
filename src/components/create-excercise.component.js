@@ -87,7 +87,13 @@ export default class CreateExercise extends Component {
       <form onSubmit={this.onSubmit}>
         <div className="form-group"> 
           <label>Username: </label>
-          <select ref="userInput"
+          <input  type="text"
+              required
+              className="form-control"
+              value={this.state.username}
+              onChange={this.onChangeUsername}
+              />
+          {/* <select ref="userInput"
               required
               className="form-control"
               value={this.state.username}
@@ -100,7 +106,7 @@ export default class CreateExercise extends Component {
                     </option>;
                 })
               }
-          </select>
+          </select> */}
         </div>
         <div className="form-group"> 
           <label>Description: </label>

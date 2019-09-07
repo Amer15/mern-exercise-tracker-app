@@ -16,10 +16,10 @@ mongoose.connect(process.env.DB_CONNECT,
   { useNewUrlParser: true, useCreateIndex: true },
   () => { console.log('connected to DB') })
 
-const exercisesRouter = require('./routes/excercises');
+const exercisesRouter = require('./routes/exercises');
 const usersRouter = require('./routes/users');
 
-app.use('/excercises', exercisesRouter);
+app.use('/exercises', exercisesRouter);
 app.use('/users', usersRouter);
 
 app.listen(port, () => {
